@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}HealthEase{% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="nav-left">
+        <img
+          src="/static/images/healthease_logo.png"
+          alt="HealthEase Logo"
+          class="logo"
+        />
+        <span class="brand-name">HealthEase</span>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a
+            href="/"
+            class="{% if active_page == 'home' %}active-link{% endif %}"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="/chatbot"
+            class="{% if active_page == 'chatbot' %}active-link{% endif %}"
+            >Chatbot</a
+          >
+        </li>
+        <li>
+          <a
+            href="/diseases"
+            class="{% if active_page == 'diseases' %}active-link{% endif %}"
+            >Diseases</a
+          >
+        </li>
+        <li>
+          <a
+            href="/tips"
+            class="{% if active_page == 'tips' %}active-link{% endif %}"
+            >Health Tips</a
+          >
+        </li>
+        <li>
+          <a
+            href="/emergency"
+            class="{% if active_page == 'emergency' %}active-link{% endif %}"
+            >Emergency</a
+          >
+        </li>
+        <li>
+          <a
+            href="/tools"
+            class="{% if active_page == 'tools' %}active-link{% endif %}"
+            >Tools</a
+          >
+        </li>
+        <li>
+          <a
+            href="/about"
+            class="{% if active_page == 'about' %}active-link{% endif %}"
+            >About</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Page-specific content goes here -->
+    {% block content %}{% endblock %}
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>
+        © 2025 HealthEase · For educational and awareness purposes only. See
+        more in the About section.
+      </p>
+    </footer>
+  </body>
+</html>

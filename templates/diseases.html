@@ -1,0 +1,68 @@
+{% extends "base.html" %} {% block title %}HealthEase - Diseases & Remedies{%
+endblock %} {% block content %}
+<main class="page diseases-page">
+  <header class="page-header">
+    <h1>Diseases &amp; Remedies</h1>
+    <p>
+      Browse some common health problems, their basic symptoms, and simple home
+      care suggestions. This is only for awareness and does not replace medical
+      advice.
+    </p>
+  </header>
+
+  <!-- Search + filter -->
+  <section class="disease-search">
+    <input
+      type="text"
+      id="disease-search-input"
+      placeholder="Search a disease (e.g. Common Cold, Migraine, Acidity)..."
+    />
+    <div class="category-chips">
+      <button class="chip active" data-category="all">All</button>
+      <button class="chip" data-category="cold_flu">Cold &amp; Flu</button>
+      <button class="chip" data-category="stomach">Stomach</button>
+      <button class="chip" data-category="headache">Headache</button>
+      <button class="chip" data-category="skin">Skin</button>
+    </div>
+  </section>
+
+  <!-- Disease cards generated from JSON -->
+  <section class="disease-grid" id="disease-grid">
+    {% for item in data %}
+    <article
+      class="disease-card"
+      data-category="{{ item.category }}"
+      data-name="{{ item.keywords }}"
+    >
+      <h2>{{ item.disease }}</h2>
+      <p class="short-desc">{{ item.short_desc }}</p>
+
+      <h3>Common symptoms</h3>
+      <ul>
+        {% for s in item.symptoms %}
+        <li>{{ s }}</li>
+        {% endfor %}
+      </ul>
+
+      <h3>Basic home care</h3>
+      <ul>
+        {% for h in item.home_care %}
+        <li>{{ h }}</li>
+        {% endfor %}
+      </ul>
+
+      {% if item.seek_help %}
+      <p class="seek-help">{{ item.seek_help }}</p>
+      {% endif %}
+    </article>
+    {% endfor %}
+  </section>
+
+  <p id="disease-empty" class="disease-empty" style="display: none">
+    No results found for your search. Try another keyword or select a different
+    category.
+  </p>
+</main>
+
+<script src="{{ url_for('static', filename='js/diseases.js') }}"></script>
+{% endblock %}

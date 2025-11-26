@@ -1,0 +1,39 @@
+[
+  {
+    "disease": "Common Cold",
+    "symptoms": ["Runny nose", "Sore throat", "Sneezing", "Mild fever"],
+    "home_care": ["Drink warm fluids", "Take rest", "Steam inhalation"]
+  },
+  {
+    "disease": "Acidity / Heartburn",
+    "symptoms": ["Burning chest", "Sour taste", "Heaviness after food"],
+    "home_care": [
+      "Avoid spicy food",
+      "Eat slowly",
+      "Do not lie down after eating"
+    ]
+  },
+  {
+    "disease": "Migraine",
+    "symptoms": ["Headache", "Light sensitivity", "Nausea"],
+    "home_care": [
+      "Rest in dark room",
+      "Drink water",
+      "Pain relief medication if needed"
+    ]
+  },
+  {
+    "disease": "Fever",
+    "symptoms": ["High temperature", "Body pain", "Weakness"],
+    "home_care": [
+      "Drink ORS",
+      "Take paracetamol",
+      "Consult doctor if high fever persists"
+    ]
+  },
+  {
+    "disease": "Skin Allergy",
+    "symptoms": ["Redness", "Itching", "Rashes"],
+    "home_care": ["Use mild soap", "Cold compress", "Avoid scratching"]
+  }
+]

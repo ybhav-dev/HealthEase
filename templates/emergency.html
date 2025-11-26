@@ -1,0 +1,112 @@
+{% extends "base.html" %} {% block title %}HealthEase - Emergency Help{%
+endblock %} {% block content %}
+<main class="page emergency-page">
+  <header class="page-header">
+    <h1>Emergency Help</h1>
+    <p>
+      Quickly review basic first-aid steps and locate nearby hospitals in case
+      of an emergency.
+    </p>
+  </header>
+
+  <section class="emergency-layout">
+    <!-- Left: First-aid cards -->
+    <section class="first-aid">
+      <h2>First Aid Guide</h2>
+      <p class="section-note">
+        Simple actions you can take immediately for common situations.
+      </p>
+
+      <div class="first-aid-grid">
+        <article class="aid-card">
+          <h3>Minor Cuts &amp; Bleeding</h3>
+          <ol>
+            <li>Wash hands and gently clean the wound with water.</li>
+            <li>Apply gentle pressure with a clean cloth to stop bleeding.</li>
+            <li>Use an antiseptic and cover with a clean bandage.</li>
+          </ol>
+          <p class="warn">
+            Seek help if bleeding doesn’t stop or the cut is deep.
+          </p>
+        </article>
+
+        <article class="aid-card">
+          <h3>Burns (Minor)</h3>
+          <ol>
+            <li>
+              Cool the burned area under running cool water for 10–20 minutes.
+            </li>
+            <li>Remove tight items like rings or watches from the area.</li>
+            <li>Cover loosely with a clean, non-stick bandage.</li>
+          </ol>
+          <p class="warn">Do not apply ice, toothpaste, or oil to burns.</p>
+        </article>
+
+        <article class="aid-card">
+          <h3>Fainting</h3>
+          <ol>
+            <li>Lay the person flat on their back.</li>
+            <li>Raise their legs slightly if possible.</li>
+            <li>Loosen tight clothing and ensure fresh air.</li>
+          </ol>
+          <p class="warn">
+            Call emergency services if they don’t wake up quickly.
+          </p>
+        </article>
+
+        <article class="aid-card">
+          <h3>Nosebleed</h3>
+          <ol>
+            <li>Sit upright and lean slightly forward.</li>
+            <li>Pinch the soft part of the nose for 10 minutes.</li>
+            <li>Breathe through the mouth and stay calm.</li>
+          </ol>
+          <p class="warn">
+            If bleeding lasts more than 20 minutes, seek medical help.
+          </p>
+        </article>
+
+        <article class="aid-card">
+          <h3>Possible Fracture</h3>
+          <ol>
+            <li>Keep the injured area still and supported.</li>
+            <li>Do not try to straighten the limb.</li>
+            <li>Apply a cold pack outside clothing to reduce swelling.</li>
+          </ol>
+          <p class="warn">
+            Get medical help immediately or call emergency services.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Right: Big hospital map -->
+    <aside class="emergency-map">
+      <h2>Nearest Hospitals</h2>
+      <p>View hospitals close to your current location.</p>
+
+      <div class="map-container big-map">
+        <iframe
+          class="map-frame"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/search/hospitals+near+me"
+        >
+        </iframe>
+      </div>
+
+      <a
+        href="https://www.google.com/maps/search/hospitals+near+me"
+        target="_blank"
+        class="btn secondary-btn map-btn"
+      >
+        Open Full Map in Google Maps
+      </a>
+
+      <p class="map-note">
+        🔔 Tip: Allow your browser to access location for more accurate results.
+      </p>
+    </aside>
+  </section>
+</main>
+{% endblock %}

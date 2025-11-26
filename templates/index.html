@@ -1,0 +1,64 @@
+{% extends "base.html" %} {% block title %}HealthEase - Home{% endblock %} {%
+block content %}
+<main class="landing">
+  <!-- Left: Feature Cards -->
+  <section class="left-panel">
+    <header class="hero">
+      <h1>Your Basic Health Awareness Companion</h1>
+      <p>
+        Check symptoms, explore health tips, and get quick emergency help in one
+        place.
+      </p>
+    </header>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>Chatbot</h3>
+        <p>Describe your symptoms and get basic health guidance.</p>
+        <a href="/chatbot" class="btn">Open Chatbot</a>
+      </div>
+
+      <div class="feature-card">
+        <h3>Health Tips</h3>
+        <p>Browse simple tips for diet, exercise, sleep, and lifestyle.</p>
+        <a href="/tips" class="btn">View Tips</a>
+      </div>
+
+      <div class="feature-card">
+        <h3>Diseases & Remedies</h3>
+        <p>Learn about common health issues and basic home care.</p>
+        <a href="/diseases" class="btn">Explore</a>
+      </div>
+
+      <div class="feature-card">
+        <h3>Emergency Help</h3>
+        <p>Read quick first-aid steps for common emergency situations.</p>
+        <a href="/emergency" class="btn">Go to Emergency</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Right: Nearest Hospitals Map -->
+  <aside class="right-panel">
+    <h2>Nearest Hospitals</h2>
+    <p>Find hospitals close to your current location.</p>
+    <div class="map-container">
+      <iframe
+        class="map-frame"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.732229407975!2d77.1100!3d28.6100!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM2JzM2LjAiTiA3N8KwMDYnMzYuMCJF!5e0!3m2!1sen!2sin!4v1700000000000"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+    <a
+      href="https://www.google.com/maps/search/hospitals+near+me"
+      target="_blank"
+      class="btn secondary-btn"
+    >
+      Open in Google Maps
+    </a>
+  </aside>
+</main>
+{% endblock %}

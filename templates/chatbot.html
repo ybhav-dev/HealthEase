@@ -1,0 +1,50 @@
+{% extends "base.html" %} {% block title %}HealthEase - Chatbot{% endblock %} {%
+block content %}
+<main class="page chat-page">
+  <header class="page-header">
+    <h1>HealthEase Chatbot</h1>
+    <p>Describe your symptoms in simple words and get basic health guidance.</p>
+  </header>
+
+  <section class="chat-container">
+    <div class="chat-header">
+      <div class="chat-avatar">H</div>
+      <div>
+        <h2>Health Assistant</h2>
+        <span>Online · Basic health information only</span>
+      </div>
+    </div>
+
+    <!-- Chat messages area -->
+    <div class="chat-messages" id="chat-messages">
+      <div class="msg bot">
+        <p>
+          Hello! 👋 I’m HealthEase. Please tell me your symptoms in simple
+          words.
+        </p>
+        <span class="time">Bot</span>
+      </div>
+    </div>
+
+    <!-- Input area -->
+    <form class="chat-input-bar" id="chat-form">
+      <input
+        type="text"
+        id="user-input"
+        placeholder="Example: I have a headache and fever..."
+        autocomplete="off"
+        required
+      />
+      <button type="submit" class="btn">Send</button>
+    </form>
+
+    <p class="chat-note">
+      ⚠ This chatbot gives general health information only. It does not provide
+      diagnosis and cannot replace a doctor.
+    </p>
+  </section>
+</main>
+
+<!-- Link to chatbot JS -->
+<script src="/static/js/chatbot.js"></script>
+{% endblock %}
